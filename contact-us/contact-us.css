@@ -1,0 +1,78 @@
+/*COLORS
+
+Dark Blue
+hex: #024059
+rgb(2, 64, 89)
+
+Light Blue
+hex: 50BFBF
+rgb(80, 191, 191)
+
+Teal
+hex: 03A696
+rgb(3, 166, 150)
+
+Orange
+hex: F2421B
+rgb(242, 66, 27)
+
+Dark Red
+hex: D92A1A
+rgb(217, 42, 26)
+
+Beige
+hex: F2ECE0
+
+*/
+
+
+/*FONTS*/
+@font-face {
+  font-family: "Milkshake";
+  src: url("../Fonts/Milkshake.otf") format("opentype");
+  src: url("../Fonts/Milkshake.ttf");
+}
+
+@font-face {
+  font-family: "OstrichSans";
+  src: url("../Fonts/ostrich-regular.ttf");
+  src: url("../Fonts/OstrichSansBold.otf");
+  src: url("../Fonts/OstrichSans-Light.otf");
+  src: url("../Fonts/OstrichSans-Black.otf");
+}
+
+/*DEFAULT STYLES*/
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+header, body, footer, main, section, aside, h1, h2, h3, h4, p, nav, form, button, li, ul {
+  margin: 0px;
+  padding: 0px;
+}
+
+body {
+  font-size: 10px;
+  font-family: 'OstrichSans',sans-serif;
+  font-weight: normal;
+  color: black;
+  background-color: #F2ECE0;
+}
+
+ul {
+  list-style-type: none;
+}
+
+/*USE EVERYWHERE*/
+[class$="wrapper"] {
+  padding: 2em;
+}
+
+.contact-container {
+  display: flex;
+  flex-flow: row wrap;
+}

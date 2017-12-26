@@ -1,0 +1,104 @@
+<!DOCTYPE HTML>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="description" content="Make your own gift card">
+    <title>Gift Cards</title>
+    <link type="text/css" rel="stylesheet" href="giftcard.css" />
+    <script type="text/javascript" src="giftcard.js"></script>
+    <script src="https://use.fontawesome.com/5ddfcdc47c.js"></script>
+  </head>
+
+  <body>
+    <header id="header">
+    </header>
+
+    <main id="main">
+      <section class="main-title-wrapper">
+        <h1 id="giftcards">Get Em' a Gift</h1>
+        <h2>Blurb</h2>
+      </section>
+
+      <div class="main-design-and-result-container">
+        <aside id="main-design">
+          <h3>Step 1: Choose your background</h3>
+          <ul>
+            <div class="background-color-design-container">
+              <li>
+                <div id="darkblue"></div>
+                <div class="color-text">Dark Blue</div>
+              </li>
+              <li>
+                <div id="lightblue"></div>
+                <div class="color-text">Light Blue</div>
+              </li>
+              <li>
+                <div id="red"></div>
+                <div class="color-text">Red</div>
+              </li>
+              <li>
+                <div id="white"></div>
+                <div class="color-text">White</div>
+              </li>
+            </div>
+          </ul>
+
+          <h3>Step 2: Choose your font</h3>
+          <ul>
+            <div class="font-design-container">
+              <li>
+                <div id="arial">Aa</div>
+                <p class="font-text">Arial</p>
+              </li>
+              <li>
+                <div id="times">Aa</div>
+                <p class="font-text">Times New Roman</p>
+              </li>
+              <li>
+                <div id="helv">Aa</div>
+                <p class="font-text">Helvetica</p>
+              </li>
+              <li>
+                <div id="tahoma">Aa</div>
+                <p class="font-text">Georgia</p>
+              </li>
+            </div>
+          </ul>
+
+          <h3>Step 3: Choose an image</h3>
+          <ul>
+            <div class="image-design-container">
+              <li><i class="fa fa-car" aria-hidden="true" alt="car icon"></i></li>
+              <li><i class="fa fa-coffee" aria-hidden="true" alt="coffee-icon"></i></li>
+              <li><i class="fa fa-cutlery" aria-hidden="true" alt="cutlery-icon"></i></li>
+              <li><i class="fa fa-heart" aria-hidden="true" alt="heart-icon"></i></li>
+            </div>
+          </ul>
+
+          <h3>Step 3: Enter the amount</h3>
+          <div class="amount-container">
+            <label for="dollar">Amount:</label>
+            <p>$</p>
+            <input type="number" min="1" maxlength="4" step="any" id="dollar" name="dollars" />
+            <p>.</p>
+            <input type="number" min="1" maxlength="2" step="any" id="cents" name="cents" />
+          </div>
+
+          <h3>Step 4: Enter a custom message</h3>
+          <div class="message-container">
+            <label for="message">Message:</label>
+            <textarea type="text" maxlength="300" id="message" name="message"></textarea>
+          </div>
+        </aside>
+
+        <aside id="main-result">
+          <div class="preview"></div>
+        </aside>
+      </div>
+    </main>
+
+    <footer id="footer">
+    </footer>
+  </body>
+
+</html>

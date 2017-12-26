@@ -1,0 +1,220 @@
+/*FONTS*/
+@font-face {
+  font-family: "Milkshake";
+  src: url("../Fonts/Milkshake.otf") format("opentype");
+  src: url("../Fonts/Milkshake.ttf");
+}
+
+@font-face {
+  font-family: "OstrichSans";
+  src: url("../Fonts/ostrich-regular.ttf");
+  src: url("../Fonts/OstrichSansBold.otf");
+  src: url("../Fonts/OstrichSans-Light.otf");
+  src: url("../Fonts/OstrichSans-Black.otf");
+}
+
+/*DEFAULT*/
+html {
+  box-sizing: border-box;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+header, body, footer, main, section, aside, h1, h2, h3, h4, p, nav, form, button, li, ul {
+  margin: 0px;
+  padding: 0px;
+}
+
+body {
+  font-size: 10px;
+  font-family: 'OstrichSans',sans-serif;
+  font-weight: normal;
+  color: black;
+  background-color: #F2ECE0;
+}
+
+ul {
+  list-style-type: none;
+}
+
+/*USE EVERYWHERE*/
+[class$="design-container"] {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+/*MAIN*/
+.main-design-and-result-container {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: space-around;
+  width: 100vw;
+  height: 100vh;
+}
+
+/*GIFT CARD PREVIEW*/
+.preview {
+  width: 40em;
+  height: 20em;
+  background-color: #F2ECE0;
+  border: 0.5px solid #000;
+}
+
+/*GC BACKGROUND COLORS*/
+#darkblue, #lightblue, #red, #white {
+  width: 10em;
+  height: 10em;
+  border: 1px solid black;
+  border-radius: 50%;
+  margin: 1rem;
+}
+
+#darkblue {
+  background-color: rgb(2, 64, 89);
+}
+
+#lightblue {
+  background-color: rgb(80, 191, 191);
+}
+
+#red {
+  background-color: rgb(217, 42, 26);
+}
+
+#white {
+  background-color: #FFF;
+}
+
+.color-text {
+  text-align: center;
+  margin: 1rem;
+}
+
+/*GC FONT*/
+.font-design-container div{
+  width: 5em;
+  height: 5em;
+  border: 1px solid black;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1em;
+}
+
+.font-design-container > li {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  margin: 1rem;
+}
+
+.font-text {
+  text-align: center;
+}
+
+#arial {
+  font-family: Arial, sans-serif;
+  font-size: 2em;
+}
+
+#times {
+  font-family: 'Times New Roman', serif;
+  font-size: 2em;
+}
+
+#helv {
+  font-family: 'Helvetica', sans-serif;
+  font-size: 2em;
+}
+
+#tahoma {
+  font-family: Georgia, sans-serif;
+  font-size: 2em;
+}
+
+/*GC ICONS*/
+.image-design-container > li {
+  border:1px solid black;
+  margin: 1rem;
+  width: 10em;
+  height: 10em;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.image-design-container i {
+  font-size: 3em;
+}
+
+/*GC AMOUNT*/
+.amount-container {
+  margin: 1em;
+  display: flex;
+  align-items: center;
+}
+
+.amount-container p:nth-child(4) {
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+  align-self: flex-end;
+}
+
+.amount-container label {
+  margin-right: 1rem;
+}
+
+.amount-container input {
+  height: 40px;
+  width: 60px;
+  font-size: 2em;
+  border: 1px solid #000;
+}
+
+/*GC MESSAGE*/
+.message-container {
+  display: flex;
+  align-items: center;
+  margin: 1em;
+}
+
+.message-container textarea {
+  height: 40px;
+  width: 400px;
+  margin-left: 1rem;
+  border: 1px solid #000;
+  font-size: 1.5em;
+}
+
+/*COLORS
+
+Dark Blue
+hex: #024059
+rgb(2, 64, 89)
+
+Light Blue
+hex: 50BFBF
+rgb(80, 191, 191)
+
+Teal
+hex: 03A696
+rgb(3, 166, 150)
+
+Orange
+hex: F2421B
+rgb(242, 66, 27)
+
+Dark Red
+hex: D92A1A
+rgb(217, 42, 26)
+
+Beige
+hex: F2ECE0
+
+*/
