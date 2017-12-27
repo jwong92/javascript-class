@@ -4,6 +4,10 @@
     <meta charset="utf-8" />
     <meta name="description" content="Make your own gift card">
     <title>Gift Cards</title>
+    <script
+  src="https://code.jquery.com/jquery-3.2.1.min.js"
+  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+  crossorigin="anonymous"></script>
     <link type="text/css" rel="stylesheet" href="giftcard.css" />
     <script type="text/javascript" src="giftcard.js"></script>
     <script src="https://use.fontawesome.com/5ddfcdc47c.js"></script>
@@ -16,7 +20,7 @@
     <main id="main">
       <section class="main-title-wrapper">
         <h1 id="giftcards">Get Em' a Gift</h1>
-        <h2>Blurb</h2>
+        <h2>Whats a better way to show you love someone than the gift of a delicious, juicy, burger, some fresh cut fries, and an ice cold milkshake? Create a custom giftcard today, or opt for a generic one, and your family and friends will thank you for it. Trust us. Giftcards can be picked up in store within 24 hours of ordering, but we'll call you when they're ready.</h2>
       </section>
 
       <div class="main-design-and-result-container">
@@ -26,19 +30,19 @@
             <div class="background-color-design-container">
               <li>
                 <div id="darkblue"></div>
-                <div class="color-text">Dark Blue</div>
+                <p class="color-text">Light Blue</p>
               </li>
               <li>
-                <div id="lightblue"></div>
-                <div class="color-text">Light Blue</div>
+                <div id="teal"></div>
+                <p class="color-text">Teal</p>
               </li>
               <li>
-                <div id="red"></div>
-                <div class="color-text">Red</div>
+                <div id="mustard"></div>
+                <p class="color-text">Yellow</p>
               </li>
               <li>
-                <div id="white"></div>
-                <div class="color-text">White</div>
+                <div id="mauve"></div>
+                <p class="color-text">Mauve</p>
               </li>
             </div>
           </ul>
@@ -51,15 +55,15 @@
                 <p class="font-text">Arial</p>
               </li>
               <li>
-                <div id="times">Aa</div>
-                <p class="font-text">Times New Roman</p>
+                <div id="impact">Aa</div>
+                <p class="font-text">Impact</p>
               </li>
               <li>
                 <div id="helv">Aa</div>
                 <p class="font-text">Helvetica</p>
               </li>
               <li>
-                <div id="tahoma">Aa</div>
+                <div id="georgia">Aa</div>
                 <p class="font-text">Georgia</p>
               </li>
             </div>
@@ -75,7 +79,13 @@
             </div>
           </ul>
 
-          <h3>Step 3: Enter the amount</h3>
+          <h3>Step 4: Enter the recipients name</h3>
+          <div class="message-container">
+            <label for="message">Name:</label>
+            <input type="text" maxlength="150" id="message" name="message"></input>
+          </div>
+
+          <h3>Step 5: Enter the amount</h3>
           <div class="amount-container">
             <label for="dollar">Amount:</label>
             <p>$</p>
@@ -84,15 +94,23 @@
             <input type="number" min="1" maxlength="2" step="any" id="cents" name="cents" />
           </div>
 
-          <h3>Step 4: Enter a custom message</h3>
-          <div class="message-container">
-            <label for="message">Message:</label>
-            <textarea type="text" maxlength="300" id="message" name="message"></textarea>
-          </div>
         </aside>
 
         <aside id="main-result">
-          <div class="preview"></div>
+          <h2>Sneak Peak</h2>
+          <div class="preview">
+            <h3>That 70's Diner</h3>
+            <h4>Hey <span id="name">________</span> someone cares about your hunger</h4>
+            <div class="price-icon-preview-container">
+              <div class="icon-preview-container">
+                <span></span>
+              </div>
+              <div class="price-preview-container">
+                <span></span>
+              </div>
+            </div>
+            <h5>Expires on: <span id="date"></span></h5>
+          </div>
         </aside>
       </div>
     </main>
