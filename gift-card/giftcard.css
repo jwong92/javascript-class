@@ -191,8 +191,9 @@ ul {
   width: 400px;
   margin-left: 1rem;
   border: 1px solid #000;
-  font-size: 1.5em;
+  font-size: 2em;
   border-radius: 5%;
+  font-family: 'OstrichSans', sans-serif;
 }
 
 /*GC AMOUNT*/
@@ -218,6 +219,7 @@ ul {
   font-size: 2em;
   border: 1px solid #000;
   border-radius: 5%;
+  font-family: 'OstrichSans', sans-serif;
 }
 
 /*SUBMIT BTN*/

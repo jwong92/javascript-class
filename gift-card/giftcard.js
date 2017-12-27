@@ -59,9 +59,28 @@ function removeIcon() {
 }
 
 
+// NAME
+
+//Capture the name being inputted
+var forName;
+$("#message").keyup(function() {
+  forName = $("#message").val();
+  addName(forName);
+  console.log(forName);
+})
+
+// function to change name only if there is a value inputted
+function addName(fname){
+  if($("#message").val() <=0) {
+    $("#name").html("________");
+  }
+  else {
+    $('#name').html(fname);
+  }
+}
+
 // PRICE
 var price;
-
 // Capture the entered amount
 $("#dollar").keyup(function() {
   price = $("#dollar").val();
