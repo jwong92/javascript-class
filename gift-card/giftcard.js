@@ -58,4 +58,25 @@ function removeIcon() {
   $(".icon-preview-container span").removeAttr("class");
 }
 
+
+// PRICE
+var price;
+
+// Capture the entered amount
+$("#dollar").keyup(function() {
+  price = $("#dollar").val();
+  addPrice(price);
+})
+
+//function to add price
+function addPrice(amount) {
+  // $(".price-preview-container span").html(amount);
+  if($("#dollar").val() <= 0) {
+    $(".price-preview-container span").html("");
+  }
+  else {
+    $(".price-preview-container span").html("$"+amount);
+  }
+}
+
 })//End Page Load
