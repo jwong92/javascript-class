@@ -115,6 +115,18 @@ function addPrice(amount) {
   }
 }
 
+// Expiry Date
+var todaysDate = new Date();
+var dayOfYear = (todaysDate.getFullYear()) + 1;
+var dayOfMonth = todaysDate.getMonth();
+var dayOfDate = todaysDate.getDate();
+
+var expiryDate = (dayOfYear + "/" + dayOfMonth + "/" + dayOfDate);
+
+$("#date").html(expiryDate);
+
+// $("#date").html()
+
 // SUBMIT BUTTON MSSG
 $("#sbt-btn").on("click", function(){
   $("#main-design > p:last-of-type").html("Far out! Your gift card is being made. We'll call you when it's ready.");
