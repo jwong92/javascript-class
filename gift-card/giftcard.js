@@ -59,9 +59,7 @@ function removeIcon() {
   $(".icon-preview-container span").removeAttr("class");
 }
 
-
 // TO NAME
-
 //Capture the name being inputted
 var forName;
 $("#message").keyup(function() {
@@ -71,7 +69,7 @@ $("#message").keyup(function() {
 
 // function to change name only if there is a value inputted
 function addName(fname){
-  if($("#message").val() <=0) {
+  if(fname.length <= 0) {
     $("#name").html("________");
   }
   else {
@@ -80,7 +78,6 @@ function addName(fname){
 }
 
 //FROM NAME
-
 // Capture the name being entered
 var e;
 $("#in-from").keyup(function(){
@@ -90,7 +87,7 @@ $("#in-from").keyup(function(){
 
 //function to add preview name
 function fromName(name) {
-  if($("#in-from").val() <= 0) {
+  if(name.length <= 0) {
     $("#from").html("___________");
   }
   else {
@@ -110,7 +107,7 @@ $("#dollar").keyup(function() {
 //function to add price
 function addPrice(amount) {
   // $(".price-preview-container span").html(amount);
-  if($("#dollar").val() <= 0) {
+  if(amount <= 0) {
     $(".price-preview-container span").html("");
   }
   else {
@@ -122,5 +119,20 @@ function addPrice(amount) {
 $("#sbt-btn").on("click", function(){
   $("#main-design > p:last-of-type").html("Far out! Your gift card is being made. We'll call you when it's ready.");
 })
+
+// CLEAR BUTTON
+$("#clear-btn").on("click", function(){
+  backgroundColor("#0475A3");
+  changeFont("impact");
+  removeIcon();
+  addName("");
+  fromName("");
+  addPrice(-1);
+  $("#message").val("");
+  $("#in-from").val("");
+  $("#dollar").val("");
+  $("#telephone").val("");
+})
+
 
 })//End Page Load
