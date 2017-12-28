@@ -36,6 +36,7 @@ for (var i=0; i<fonts.length; i++) {
 //Function to change the font
 function changeFont(font) {
   $(".preview h4").css("font-family", font);
+  $(".from-expiry-container").css("font-family", font);
 }
 
 // ICONS
@@ -59,14 +60,13 @@ function removeIcon() {
 }
 
 
-// NAME
+// TO NAME
 
 //Capture the name being inputted
 var forName;
 $("#message").keyup(function() {
   forName = $("#message").val();
   addName(forName);
-  console.log(forName);
 })
 
 // function to change name only if there is a value inputted
@@ -79,12 +79,32 @@ function addName(fname){
   }
 }
 
+//FROM NAME
+
+// Capture the name being entered
+var e;
+$("#in-from").keyup(function(){
+   e = $("#in-from").val();
+  fromName(e);
+})
+
+//function to add preview name
+function fromName(name) {
+  if($("#in-from").val() <= 0) {
+    $("#from").html("___________");
+  }
+  else {
+    $("#from").html(name);
+  }
+}
+
 // PRICE
-var price;
-// Capture the entered amount
+// Round the entered amount
+var round;
 $("#dollar").keyup(function() {
-  price = $("#dollar").val();
-  addPrice(price);
+  var price = $("#dollar").val();
+  round = Math.round(price);
+  addPrice(round);
 })
 
 //function to add price
@@ -97,5 +117,10 @@ function addPrice(amount) {
     $(".price-preview-container span").html("$"+amount);
   }
 }
+
+// SUBMIT BUTTON MSSG
+$("#sbt-btn").on("click", function(){
+  $("#main-design > p:last-of-type").html("Far out! Your gift card is being made. We'll call you when it's ready.");
+})
 
 })//End Page Load
