@@ -210,6 +210,17 @@ h3 {
   background-color: #035475;
 }
 
+.fa-motorcycle {
+  font-size: 4.5em;
+}
+
+@keyframes motorcycle {
+  0% {transform: translateX(0px);}
+  100% {
+    transform: translateX(100vw);
+  }
+}
+
 /* CONTACT US SECTION */
 .main-map-wrapper {
   margin-top: 2rem;
