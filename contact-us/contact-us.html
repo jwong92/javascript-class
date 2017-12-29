@@ -35,7 +35,7 @@
       </section>
       <div class="contact-container">
         <section class="main-form-wrapper">
-          <form name="contact-us-form" method="get">
+          <form name="contact-us-form" method="post">
             <ul>
               <li class="form-row">
                 <label for="fname">Name</label>
@@ -62,8 +62,10 @@
               </li>
             </ul>
             <div class="icon-button-container">
-              <button id="sbt-btn" type="submit" name="btn-submit" formmethod="get">Holla!</button>
+              <button id="sbt-btn" type="submit" name="btn-submit">Holla!</button>
+              <button id="clear-btn" type="submit" name="btn-clear">retart</button>
               <i class="fa fa-motorcycle hidden" aria-hidden="true"></i>
+              <p class="hidden sent-mssg">Got it! We'll get back to you asap</p>
             </div>
           </form>
         </section>

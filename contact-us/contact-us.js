@@ -5,12 +5,24 @@ $(document).ready(function(){
   $("#sbt-btn").on("click", function(){
     $("i").removeClass("hidden");
     $(".fa-motorcycle").css({
-      "animation":"motorcycle 5s linear"
+      "animation":"motorcycle 3s linear"
     });
+    var showMssg = setInterval(sent, 3000);
+
     return false;
   });
 
+// Function the add a confirmation message
+function sent() {
+  $(".sent-mssg").removeClass("hidden");
+}
 
+// on click of the clear button, clear the page
+  $("#btn-clear").on("click", function(){
+    clear();
+  });
+
+// https://jonsuh.com/blog/detect-the-end-of-css-animations-and-transitions-with-javascript/
 
 //Function to determine the animation end
 function whichAnimationEvent(){
@@ -38,5 +50,9 @@ $(".fa-motorcycle").on(animationEvent, function() {
   $(".fa-motorcycle").addClass("hidden");
 });
 
+// Function to clear the form
+function clear() {
+  $(".form-row label").html("");
+}
 
 });//END PAGE LOAD
