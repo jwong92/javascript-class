@@ -96,9 +96,11 @@ ul {
   height: 40px;
   width: 400px;
   margin-left: 1rem;
-  border: 1px solid #000;
+  border: none;
+  box-shadow: inset -1px -1px 2px;
   font-size: 2em;
-  border-radius: 5%;
+  padding: 0.5rem;
+  border-radius: 5px;
   font-family: 'Helvetica', sans-serif;
 }
 
@@ -106,8 +108,9 @@ ul {
   height: 40px;
   width: 150px;
   font-size: 2em;
-  border: 1px solid #000;
-  border-radius: 5%;
+  border: none;
+  box-shadow: inset -1px -1px 2px;
+  border-radius: 5px;
   font-family: 'Helvetica', sans-serif;
 }
 
@@ -123,7 +126,7 @@ ul {
 .main-title-wrapper{
   margin: 0 auto;
   text-align: center;
-  width: 1265px;
+  max-width: 1265px;
   padding: 2rem;
 }
 
@@ -132,7 +135,7 @@ ul {
 }
 
 #giftcards {
-  font-size: 5em;
+  font-size: 9em;
   font-family: "Milkshake", sans-serif;
   color: rgb(217, 42, 26);
   font-weight: bold;
@@ -255,7 +258,7 @@ ul {
   width: 100px;
   height: 50px;
   border: none;
-  border-radius: 5%;
+  border-radius: 5px;
   color: #FFF;
   font-family: 'OstrichSans', sans-serif;
   font-weight: normal;

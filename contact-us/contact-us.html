@@ -31,50 +31,79 @@
     <main id="main">
       <section class="main-heading-wrapper">
         <h1 id="contact">Contact</h1>
-        <h2 class="sub-heading">Blurb</h2>
+        <h2 class="sub-heading">Please take a moment to fill out the form below, and holla at us. We'll get back to you within 2-3 business days. Alternatively, you can give us a call during our business hours, or send us an email directly. It'd be groovy to hear from ya! </h2>
       </section>
       <div class="contact-container">
         <section class="main-form-wrapper">
           <form name="contact-us-form" method="get">
             <ul>
-              <li><label for="flname">Name</label></li>
-              <li><input type="text" id="flname" name="flname" /></li>
-              <li><label for="phone">Phone Number</label></li>
-              <li><input type="number" id="phone" name="phone" /></li>
-              <li><label for="email">Email</label></li>
-              <li><input type="email" id="email" name="email" /></li>
-              <li><label for="comment">Comment</label></li>
-              <li><textarea type="text" name="comment" id="comment"></textarea></li>
+              <li class="form-row">
+                <label for="fname">Name</label>
+                <span class="fname-container">
+                  <input type="text" id="fname" name="fname" />
+                  <label for="fname">First</label>
+                </span>
+                <span class="lname-container">
+                  <input type="text" id="lname" name="lname" />
+                  <label for="lname">Last</label>
+                </span>
+              </li>
+              <li class="form-row">
+                <label for="phone">Your phone number</label>
+                <input type="number" id="phone" name="phone" />
+              </li>
+              <li class="form-row">
+                <label for="email">Your email</label>
+                <input type="email" id="email" name="email" />
+              </li>
+              <li class="form-row">
+                <label for="comment">Please leave your comment</label>
+                <textarea type="text" name="comment" id="comment"></textarea>
+              </li>
             </ul>
-            <i class="fa fa-car" aria-hidden="true"></i>
-            <button type="submit" name="btn-submit" formmethod="get">Go!</button>
+            <div class="icon-button-container">
+              <button id="sbt-btn" type="submit" name="btn-submit" formmethod="get">Holla!</button>
+              <i class="fa fa-car hidden" aria-hidden="true"></i>
+            </div>
           </form>
         </section>
 
         <section class="main-map-wrapper">
+          <h2 id="contact-us" class="sub-heading">Contact Us</h2>
           <aside id="contact-information" class="map-contact-container">
-            <h2 id="contact-us" class="sub-heading">Contact Us</h2>
-            <h3>Phone</h3>
-            <p>555.555.5555</p>
-            <h3>Email</h3>
-            <p>nameofourrestaurant@gmail.com</p>
-            <h3>Address</h3>
-            <ul>
-              <li><p>Name</p></li>
-              <li><p>1234 RocknRoll Road</p></li>
-              <li><p>Riverside, Ontario</p></li>
-              <li><p>R1V 3R5</p></li>
-            </ul>
-            <h3>Hours</h3>
-            <ul>
-              <li><p>Monday: 12:00PM - 1:00AM</p></li>
-              <li><p>Tuesday: 12:00PM - 1:00AM</p></li>
-              <li><p>Wednesday: 12:00PM - 1:00AM</p></li>
-              <li><p>Thursday: 12:00PM - 1:00AM</p></li>
-              <li><p>Friday: 12:00PM - 4:00AM</p></li>
-              <li><p>Saturday: 12:00PM - 4:00AM</p></li>
-              <li><p>Sunday: 12:00PM - 4:00AM</p></li>
-            </ul>
+            <div class="contact-us-address-container">
+              <div class="phone-container">
+                <h3>Phone</h3>
+                <p>555.555.5555</p>
+              </div>
+              <div class="address-container">
+              <h3>Address</h3>
+              <ul>
+                <li><p>That 70's Diner</p></li>
+                <li><p>1234 RocknRoll Road</p></li>
+                <li><p>Riverside, Ontario</p></li>
+                <li><p>D1N 3R5</p></li>
+              </ul>
+              <div class="email-container">
+                <h3>Email</h3>
+                <p>that70diner@gmail.com</p>
+              </div>
+              </div>
+            </div>
+            <div class="contact-us-hours-container">
+              <div class="hours-container">
+                <h3>Hours</h3>
+                <ul>
+                  <li><p>Monday: 12:00PM - 1:00AM</p></li>
+                  <li><p>Tuesday: 12:00PM - 1:00AM</p></li>
+                  <li><p>Wednesday: 12:00PM - 1:00AM</p></li>
+                  <li><p>Thursday: 12:00PM - 1:00AM</p></li>
+                  <li><p>Friday: 12:00PM - 4:00AM</p></li>
+                  <li><p>Saturday: 12:00PM - 4:00AM</p></li>
+                  <li><p>Sunday: 12:00PM - 4:00AM</p></li>
+                </ul>
+              </div>
+            </div>
           </aside>
         </section>
       </div>

@@ -30,15 +30,36 @@ hex: F2ECE0
 @font-face {
   font-family: "Milkshake";
   src: url("../Fonts/Milkshake.otf") format("opentype");
-  src: url("../Fonts/Milkshake.ttf");
+  src: url("../Fonts/Milkshake.ttf") format("truetype");
+  font-style: normal;
 }
 
 @font-face {
   font-family: "OstrichSans";
-  src: url("../Fonts/ostrich-regular.ttf");
-  src: url("../Fonts/OstrichSansBold.otf");
-  src: url("../Fonts/OstrichSans-Light.otf");
-  src: url("../Fonts/OstrichSans-Black.otf");
+  src: url("../Fonts/ostrich-regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "OstrichSans";
+  src: url("../Fonts/OstrichSans-Bold.otf") format("opentype");
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Futura";
+  src: url("../Fonts/futura-med-cond.ttf") format("truetype");
+  font-weight:normal;
+  font-style:normal;
+}
+
+@font-face {
+  font-family: "Futura";
+  src: url("../Fonts/futura-bold.ttf");
+  font-weight:bold;
+  font-style: normal;
 }
 
 /*DEFAULT STYLES*/
@@ -57,10 +78,11 @@ header, body, footer, main, section, aside, h1, h2, h3, h4, p, nav, form, button
 
 body {
   font-size: 10px;
-  font-family: 'OstrichSans',sans-serif;
+  font-family: 'Futura',sans-serif;
   font-weight: normal;
+  font-style: normal;
   color: black;
-  background-color: #F2ECE0;
+  background-color: #50BFBF;
 }
 
 ul {
@@ -68,11 +90,141 @@ ul {
 }
 
 /*USE EVERYWHERE*/
-[class$="wrapper"] {
-  padding: 2em;
-}
 
 .contact-container {
   display: flex;
-  flex-flow: row wrap;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: flex-start;
+  max-width: 1290px;
+  margin: 2rem auto;
+}
+
+h2 {
+  font-size: 3em;
+  font-weight: normal;
+}
+
+h3 {
+  font-size: 2.5em;
+  font-family: 'OstrichSans', sans-serif;
+  font-weight: normal;
+  font-style: normal;
+  margin-top: 0.8rem;
+}
+
+.hidden {
+  display: none;
+}
+
+/*MAIN HEADING*/
+.main-heading-wrapper {
+  max-width: 1280px;
+  padding: 2rem;
+  margin: 0 auto;
+  text-align: center;
+}
+
+#contact {
+  font-family: "Milkshake";
+  font-size: 9em;
+  color: rgb(217, 42, 26);
+  font-weight: bold;
+  font-style: normal;
+}
+
+/* CONTACT FORM */
+.main-form-wrapper {
+  margin-right: 1rem;
+}
+
+.form-row {
+  display: flex;
+  flex-flow: row;
+  justify-content: space-between;
+  align-items: center;
+  margin: 2rem;
+}
+
+.form-row label:first-child {
+  font-size: 2.5em;
+  margin-right: 2rem;
+}
+
+.form-row input {
+  width: 500px;
+  height: 40px;
+  font-size: 2em;
+  padding: 0.5rem;
+  border-radius: 5px;
+  border: none;
+  box-shadow: inset -1px -1px 2px;
+}
+
+/* CONTACT FORM NAME */
+
+[class$="name-container"]{
+  display: flex;
+  flex-flow: column wrap;
+  justify-content:flex-end;
+}
+
+[class$="name-container"] label {
+  font-size: 1.5em;
+}
+
+[class$="name-container"] input {
+  width: 170px;
+}
+
+/* CONTACT FORM COMMENT */
+
+.form-row textarea {
+  width: 500px;
+  height: 100px;
+  border-radius: 5px;
+  box-shadow: inset -1px -1px 2px;
+  border: none;
+  font-size: 2em;
+}
+
+/* CONTACT FORM BUTTON */
+.icon-button-container {
+  margin: 2rem;
+}
+
+#sbt-btn {
+  width: 100px;
+  height: 50px;
+  border: none;
+  border-radius: 5px;
+  color: #FFF;
+  font-family: 'OstrichSans', sans-serif;
+  font-weight: normal;
+  font-style: normal;  font-size: 3em;
+  background-color: #024059;
+  box-shadow: inset black -1px -1px 2px;
+}
+
+#sbt-btn:hover {
+  background-color: #035475;
+}
+
+/* CONTACT US SECTION */
+.main-map-wrapper {
+  margin-top: 2rem;
+}
+
+.map-contact-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.map-contact-container p {
+  font-size: 2em;
+}
+
+#contact-us {
+  text-align: center;
+  margin-bottom: 2rem;
 }
