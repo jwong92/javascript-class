@@ -1,6 +1,8 @@
 $(document).ready(function(){
-  // associate the click of the link to the description
 
+
+
+//POP UP BOX
 // number of jobs
 var jobs = 10;
 var jobClass = ".";
@@ -10,11 +12,10 @@ $("a").on("click", function(){
   jobClass += $(this).attr("class");
   $(".pop-up").removeClass("hidden");
   fillJobDescr(jobClass);
+  jobClass = ".";
 });
 
-
 // function that will associate the job clicked to the description - variables of title, id, manager, and description
-
 function fillJobDescr(job) {
   var a = $(job+"-1").html();
   var b = $(job+"-2").html();
@@ -26,6 +27,12 @@ function fillJobDescr(job) {
   $("#job-description").html(d);
 }
 
-
+// Close pop up box
+$("#close").on("mouseover", function(){
+  $("#close").css("cursor", "pointer");
+});
+$("#close").on("click", function(){
+  $(".pop-up").addClass("hidden");
+});
 
 }); //END PAGE LOAD

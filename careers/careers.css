@@ -1,16 +1,151 @@
 
+/*FONTS*/
+@font-face {
+  font-family: "Milkshake";
+  src: url("../Fonts/Milkshake.otf") format("opentype");
+  src: url("../Fonts/Milkshake.ttf") format("truetype");
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "OstrichSans";
+  src: url("../Fonts/ostrich-regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "OstrichSans";
+  src: url("../Fonts/OstrichSans-Bold.otf") format("opentype");
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Futura";
+  src: url("../Fonts/futura-med-cond.ttf") format("truetype");
+  font-weight:normal;
+  font-style:normal;
+}
+
+@font-face {
+  font-family: "Futura";
+  src: url("../Fonts/futura-bold.ttf");
+  font-weight:bold;
+  font-style: normal;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+body {
+  font-size: 10px;
+  font-family: 'Futura',sans-serif;
+  font-weight: normal;
+  font-style: normal;
+  color: black;
+  background-color: #50BFBF;
+}
+
+ul {
+  list-style-type: none;
+}
+
+header, body, footer, main, section, aside, h1, h2, h3, h4, p, nav, form, button, li, ul {
+  margin: 0px;
+  padding: 0px;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+a:hover {
+  text-decoration: underline;
+  color: #024059;
+}
+
+.hidden {
+  display: none;
+}
+
+/* HEADER */
+h1 {
+  font-family: "Milkshake";
+  font-size: 9em;
+  color: rgb(217, 42, 26);
+  font-weight: bold;
+  font-style: normal;
+}
+#header h2 {
+  font-size: 3em;
+}
+
+#header h3 {
+  font-family: 'OstrichSans', sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 5em;
+}
+
+/* Job Categories */
+.job-types-container {
+  display: flex;
+  flex: row;
+  justify-content: space-around;
+}
+
+.job-type{
+  font-family: "Milkshake", sans-serif;
+  font-size: normal;
+  font-weight: normal;
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #F2421B;
+  color: #FFF;
+  font-size: 2.5em;
+  box-shadow: 3px 3px 4px;
+}
+
+/* MAIN */
+/* category-titles */
+.category-title {
+  font-family: 'OstrichSans', sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 5em;
+}
+
+/* job titles */
+li [class^="job-"] {
+  font-size: 2.5em;
+}
+
+/* POP UP BOX */
+#close {
+  position: absolute;
+  right: 0;
+  padding: 1rem;
+}
+
 .pop-up {
-  height: calc(100vh - 20%);
-  width: calc(100vw - 20%);
+  height: calc(100vh - 10%);
+  width: calc(100vw - 10%);
   background-color: white;
   border: 1px solid black;
   position: absolute;
   top: 50%;
   left: 50%;
-  margin-left: calc(((100vw - 20%)/2)* -1);
-  margin-top: calc(((100vh - 20%)/2)* -1);
-}
-
-.hidden {
-  display: none;
+  margin-left: calc(((100vw - 10%)/2)* -1);
+  margin-top: calc(((100vh - 10%)/2)* -1);
 }
