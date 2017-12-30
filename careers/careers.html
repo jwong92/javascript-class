@@ -1,0 +1,169 @@
+<!DOCTYPE HTML>
+
+<html lang="en">
+<head>
+  <script
+  src="https://code.jquery.com/jquery-3.2.1.min.js"
+  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+  crossorigin="anonymous"></script>
+  <meta charset="utf-8" />
+  <meta name="description" content="Careers Page" />
+  <title>Careers</title>
+  <link rel="stylesheet" type="text/css" href="careers.css" />
+  <script type="text/javascript" src="careers.js"></script>
+</head>
+
+<body>
+  <header id="header">
+    <h1>Careers</h1>
+    <h2 class="subheading">Welcome to our careers page. That 70's Diner is an ever growing and expanding family, and we are always looking for people to become a part of it. Take a look at some of our postings below. If you don't see something you like, but feel you'd be a great fit, feel free to send us your resume anyways at: that70diner@gmail.com, with the subject line: Job Inquiry. We look forward to hearing from you!</h2>
+    <h3>Job Categories</h3>
+    <div class="job-types-container">
+      <div class="job-type"><p>Dining Room<p></div>
+      <div class="job-type"><p>Kitchen</p></div>
+      <div class="job-type"><p>Business</p></div>
+      <div class="job-type"><p>Bar</p></div>
+    <div>
+  </header>
+
+  <main id="main">
+    <div class="job-postings-descriptons-container">
+      <aside class="job-positings">
+        <h2 class="category-title">Dining Room</h2>
+          <ul>
+            <li><a href="#" class="job-1">Server - Mornings</a></li>
+            <li><a href="#" class="job-2">Server - Closing</a></li>
+            <li><a href="#" class="job-3">Host/Hostess</a></li>
+          </ul>
+        <h2 class="category-title">Kitchen</h2>
+          <ul>
+            <li><a href="#" class="job-4">Head Griller - Weekends</a></li>
+            <li><a href="#" class="job-5">Prepper</a></li>
+            <li><a href="#" class="job-6">Dishwasher</a></li>
+            <li><a href="#" class="job-7">Griller</a></li>
+          </ul>
+        <h2 class="category-title">Business</h2>
+          <ul>
+            <li><a href="#" class="job-8">Payroll Accountant</a></li>
+            <li><a href="#" class="job-9">Marketing Associate</a></li>
+          </ul>
+        <h2 class="category-title">Bar</h2>
+          <ul>
+            <li><a href="#" class="job-10">Bartender - Evenings</a></li>
+          </ul>
+      </aside>
+
+      <div class="pop-up hidden">
+        <span id="close">X</span>
+        <aside class="job-descriptions">
+          <h2 class="category-title">Job Description</h2>
+          <div class="job-title-container">
+            <h3>Job Title: <span id="job-title">Title</span></h3>
+            <h3>Job ID: <span id="job-id">ID</span></h3>
+            <h3>Job Manager: <span id="job-manager">Manager</span></h3>
+          </div>
+          <div class="job-description-container">
+            <h3>Description</h3>
+            <p id="job-description">Where the entire job description goes</p>
+          </div>
+          <form name="application-form" method="post">
+            <ul>
+              <li class="input-row">
+                <label for="app-resume">Resume</label>
+                <input type="file" id="app-resume" name="resume" />
+              </li>
+              <li class="input-row">
+                <label for="app-name">Full Name</label>
+                <input type="text" id="app-name" name="name" />
+              </li>
+              <li class="input-row">
+                <label for="app-pnum">Phone Number</label>
+                <input type="number" id="app-pnum" name="pnum" />
+              </li>
+              <li class="input-row">
+                <label for="app-email">Email</label>
+                <input type="email" id="app-email" name="email" />
+              </li>
+              <li class="input-row">
+                <label for="app-info">Additional Information</label>
+                <textarea type="text" id="app-info" name="info"></textarea>
+              </li>
+            </ul>
+          </form>
+        </aside>
+      </div>
+    </div>
+
+    <aside class="hidden">
+      <section id="server-morn" class="job-description-details hidden">
+        <p class="job-1-1">Server - Mornings</p>
+        <p class="job-1-2">12345</p>
+        <p class="job-1-3">Jessica Wong</p>
+        <p class="job-1-4">Description</p>
+      </section>
+      <section id="server-close" class="job-description-details hidden">
+        <p class="job-2-1">Server - Closing</p>
+        <p class="job-2-2">22345</p>
+        <p class="job-2-3">Jessica Wong</p>
+        <p class="job-2-4">Description</p>
+      </section>
+      <section id="host" class="job-description-details hidden">
+        <p class="job-3-1">Host/Hostess</p>
+        <p class="job-3-2">32345</p>
+        <p class="job-3-3">Jessica Wong</p>
+        <p class="job-3-4">Description</p>
+      </section>
+      <section id="head-grill" class="job-description-details hidden">
+        <p class="job-4-1">Head Griller-Weekends</p>
+        <p class="job-4-2">42345</p>
+        <p class="job-4-3">Bradley Campbell</p>
+        <p class="job-4-4">Description</p>
+      </section>
+      <section id="prep" class="job-description-details hidden">
+        <p class="job-5-1">Prepper</p>
+        <p class="job-5-2">52345</p>
+        <p class="job-5-3">Bradley Campbell</p>
+        <p class="job-5-4">Description</p>
+      </section>
+      <section id="dishwasher" class="job-description-details hidden">
+        <p class="job-6-1">Dishwasher</p>
+        <p class="job-6-2">62345</p>
+        <p class="job-6-3">Bradley Campbell</p>
+        <p class="job-6-4">Description</p>
+      </section>
+      <section id="dishwasher" class="job-description-details hidden">
+        <p class="job-7-1">Griller</p>
+        <p class="job-7-2">72345</p>
+        <p class="job-7-3">Bradley Campbell</p>
+        <p class="job-7-4">Description</p>
+      </section>
+      <section id="payroll" class="job-description-details hidden">
+        <p class="job-8-1">Payroll Accountant</p>
+        <p class="job-8-2">82345</p>
+        <p class="job-8-3">Sophia Vong</p>
+        <p class="job-8-4">Description</p>
+      </section>
+      <section id="payroll" class="job-description-details hidden">
+        <p class="job-9-1">Marketing Associate</p>
+        <p class="job-9-2">92345</p>
+        <p class="job-9-3">Sophia Vong</p>
+        <p class="job-9-4">Description</p>
+      </section>
+      <section id="payroll" class="job-description-details hidden">
+        <p class="job-10-1">Bartender - Evenings</p>
+        <p class="job-10-2">13345</p>
+        <p class="job-10-3">Jessica Wong</p>
+        <p class="job-10-4">Description</p>
+      </section>
+    </aside>
+
+  </main>
+
+  <footer id="footer">
+  </footer>
+</body>
+
+
+</html>
+
+<!-- https://stackoverflow.com/questions/15519223/how-can-i-customize-the-browse-button  - for the browse file button-->
