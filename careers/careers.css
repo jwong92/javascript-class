@@ -2,37 +2,42 @@
 /*FONTS*/
 @font-face {
   font-family: "Milkshake";
-  src: url("../Fonts/Milkshake.otf") format("opentype");
-  src: url("../Fonts/Milkshake.ttf") format("truetype");
+  src: url('../compatible/milkshake-webfont.woff2') format('woff2'),
+       url('../compatible/milkshake-webfont.woff') format('woff');
   font-style: normal;
-}
-
-@font-face {
-  font-family: "OstrichSans";
-  src: url("../Fonts/ostrich-regular.ttf") format("truetype");
   font-weight: normal;
-  font-style: normal;
 }
 
 @font-face {
-  font-family: "OstrichSans";
-  src: url("../Fonts/OstrichSans-Bold.otf") format("opentype");
-  font-weight: bold;
-  font-style: normal;
+    font-family: 'OstrichSansReg';
+    src: url('../compatible/ostrich-regular-webfont.woff2') format('woff2'),
+         url('../compatible/ostrich-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
 }
 
 @font-face {
-  font-family: "Futura";
-  src: url("../Fonts/futura-med-cond.ttf") format("truetype");
-  font-weight:normal;
-  font-style:normal;
+    font-family: 'futura_bdcn_btbold';
+    src: url('../compatible/futura_bold_font-webfont.woff2') format('woff2'),
+         url('../compatible/futura_bold_font-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
 }
 
 @font-face {
-  font-family: "Futura";
-  src: url("../Fonts/futura-bold.ttf");
-  font-weight:bold;
-  font-style: normal;
+    font-family: 'futura_lt_btlight';
+    src: url('../compatible/futura_light_bt-webfont.woff2') format('woff2'),
+         url('../compatible/futura_light_bt-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'futura_mdcn_btmedium';
+    src: url('../compatible/futura_medium_condensed_bt-webfont.woff2') format('woff2'),
+         url('../compatible/futura_medium_condensed_bt-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
 }
 
 html {
@@ -45,7 +50,7 @@ html {
 
 body {
   font-size: 10px;
-  font-family: 'Futura',sans-serif;
+  font-family: 'futura_mdcn_btmedium',sans-serif;
   font-weight: normal;
   font-style: normal;
   color: black;
@@ -77,10 +82,10 @@ a:hover {
 
 /* HEADER */
 h1 {
-  font-family: "Milkshake";
+  font-family: "Milkshake", sans-serif;
   font-size: 9em;
   color: rgb(217, 42, 26);
-  font-weight: bold;
+  font-weight: normal;
   font-style: normal;
 }
 #header h2 {
@@ -88,7 +93,7 @@ h1 {
 }
 
 #header h3 {
-  font-family: 'OstrichSans', sans-serif;
+  font-family: 'OstrichSansReg', sans-serif;
   font-style: normal;
   font-weight: normal;
   font-size: 5em;
@@ -117,10 +122,15 @@ h1 {
   box-shadow: 3px 3px 4px;
 }
 
+.job-type:hover {
+  background-color:#E53F1A;
+  cursor: pointer;
+}
+
 /* MAIN */
 /* category-titles */
 .category-title {
-  font-family: 'OstrichSans', sans-serif;
+  font-family: 'OstrichSansReg', sans-serif;
   font-style: normal;
   font-weight: normal;
   font-size: 5em;
@@ -139,6 +149,7 @@ li [class^="job-"] {
 }
 
 .pop-up {
+  padding: 1rem;
   height: calc(100vh - 10%);
   width: calc(100vw - 10%);
   background-color: white;
@@ -148,4 +159,60 @@ li [class^="job-"] {
   left: 50%;
   margin-left: calc(((100vw - 10%)/2)* -1);
   margin-top: calc(((100vh - 10%)/2)* -1);
+  overflow: scroll;
+}
+
+/* job titles */
+.job-title-container h3, .job-description-container h3{
+  font-size: 3em;
+}
+
+.job-title-container span {
+  font-style: normal;
+  font-weight: lighter;
+}
+
+.job-description-container {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+#job-description h2{
+  font-family: 'OstrichSansReg', sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 3em;
+}
+
+#job-description p, #job-description li{
+  font-size: 2em;
+  list-style:circle;
+  margin-left: 1rem;
+}
+
+/* FORM */
+.form-wrapper {
+  max-width: 60%;
+}
+
+.input-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.input-row label {
+  font-size: 3em;
+}
+
+.input-row input, textarea {
+  width: 500px;
+  height: 50px;
+  margin: 1rem;
+  border: none;
+  box-shadow: -1px -1px 2px #AAAFB2;
+}
+
+#app-info {
+  height: 200px;
 }

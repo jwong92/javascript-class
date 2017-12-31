@@ -24,7 +24,7 @@ function fillJobDescr(job) {
   $("#job-title").html(a);
   $("#job-id").html(b);
   $("#job-manager").html(c);
-  $("#job-description").html(d);
+  $("#job-description").load("job-desc.html" + " " + d);
 }
 
 // Close pop up box
