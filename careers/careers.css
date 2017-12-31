@@ -125,7 +125,7 @@ h1 {
 
 .job-type{
   font-family: "Milkshake", sans-serif;
-  font-size: normal;
+  font-style: normal;
   font-weight: normal;
   border-radius: 50%;
   width: 150px;
@@ -276,4 +276,81 @@ li [class^="job-"] {
 
 #sbt-mssg {
   font-size: 2em;
+}
+
+
+/* MEDIA QUERIES */
+
+/* header */
+@media all and (max-width: 900px) {
+  .job-type {
+    height: 130px;
+    width: 130px;
+    font-size: 1.5rem;
+  }
+}
+
+@media all and (max-width: 720px) {
+  .job-type {
+    height: 100px;
+    width: 100px;
+  }
+
+  #header h2 {
+    font-size: 2.5em;
+  }
+}
+
+@media all and (max-width: 500px) {
+  .job-type {
+    display: none;
+  }
+  h1 {
+    font-size: 7em;
+  }
+  #header h2 {
+    font-size: 2em;
+  }
+  #header h3 {
+    font-size: 4em;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+  .category-title {
+    font-size: 4em;
+  }
+}
+
+/* MAIN */
+
+@media all and (max-width: 720px) {
+  .job-postings-image-container {
+    margin: 2rem auto;
+  }
+  .img-container {
+    width: 300px;
+  }
+}
+
+@media all and (max-width: 640px) {
+  .job-postings-image-container {
+    flex-flow: column wrap;
+    text-align: center;
+    justify-content: space-around;
+  }
+  .img-container {
+    padding-top: 2rem;
+  }
+}
+
+@media all and (max-width: 500px) {
+  .job-postings-image-container {
+    margin: 0 auto;
+  }
+}
+
+/* FORM */
+
+@media all and (max-width: 1410px) {
+
 }

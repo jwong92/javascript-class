@@ -7,6 +7,7 @@ var jobClass = ".";
 
 //Determine the class that was clicked
 $("li a").on("click", function(){
+  $("#sbt-mssg").addClass("hidden");
   jobClass += $(this).attr("class");
   $(".pop-up").removeClass("hidden");
   fillJobDescr(jobClass);
