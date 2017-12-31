@@ -48,6 +48,11 @@ html {
   box-sizing: inherit;
 }
 
+header, body, footer, main, section, aside, h1, h2, h3, h4, p, nav, form, button, li, ul {
+  margin: 0px;
+  padding: 0px;
+}
+
 body {
   font-size: 10px;
   font-family: 'futura_mdcn_btmedium',sans-serif;
@@ -55,15 +60,11 @@ body {
   font-style: normal;
   color: black;
   background-color: #50BFBF;
+  padding: 2rem;
 }
 
 ul {
   list-style-type: none;
-}
-
-header, body, footer, main, section, aside, h1, h2, h3, h4, p, nav, form, button, li, ul {
-  margin: 0px;
-  padding: 0px;
 }
 
 a {
@@ -73,7 +74,8 @@ a {
 
 a:hover {
   text-decoration: underline;
-  color: #024059;
+  /* color: #024059; */
+  color: #FFF;
 }
 
 .hidden {
@@ -81,6 +83,12 @@ a:hover {
 }
 
 /* HEADER */
+#header {
+  max-width: 1280px;
+  margin: 0 auto;
+  text-align: center
+}
+
 h1 {
   font-family: "Milkshake", sans-serif;
   font-size: 9em;
@@ -97,13 +105,22 @@ h1 {
   font-style: normal;
   font-weight: normal;
   font-size: 5em;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
 }
 
 /* Job Categories */
 .job-types-container {
   display: flex;
-  flex: row;
-  justify-content: space-around;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.job-types-container a:hover {
+  text-decoration: none;
+  color: #FFF;
 }
 
 .job-type{
@@ -117,9 +134,8 @@ h1 {
   justify-content: center;
   align-items: center;
   background-color: #F2421B;
-  color: #FFF;
   font-size: 2.5em;
-  box-shadow: 3px 3px 4px;
+  box-shadow: 3px 3px 4px #FFF;
 }
 
 .job-type:hover {
@@ -128,12 +144,21 @@ h1 {
 }
 
 /* MAIN */
+.job-postings-image-container {
+  max-width: 1000px;
+  margin: 5rem auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
 /* category-titles */
 .category-title {
   font-family: 'OstrichSansReg', sans-serif;
   font-style: normal;
   font-weight: normal;
   font-size: 5em;
+  margin-top: 2rem;
 }
 
 /* job titles */
@@ -141,25 +166,40 @@ li [class^="job-"] {
   font-size: 2.5em;
 }
 
+/* image container */
+.img-container {
+  width: 400px;
+}
+
+.img-container img {
+  width: 100%;
+}
+
 /* POP UP BOX */
 #close {
   position: absolute;
   right: 0;
-  padding: 1rem;
+  margin-right: 1rem;
+  font-size: 5em;
 }
 
 .pop-up {
   padding: 1rem;
-  height: calc(100vh - 10%);
-  width: calc(100vw - 10%);
+  height: calc(100vh - 5%);
+  width: calc(100vw - 5%);
   background-color: white;
   border: 1px solid black;
   position: absolute;
   top: 50%;
   left: 50%;
-  margin-left: calc(((100vw - 10%)/2)* -1);
-  margin-top: calc(((100vh - 10%)/2)* -1);
+  margin-left: calc(((100vw - 5%)/2)* -1);
+  margin-top: calc(((100vh - 5%)/2)* -1);
   overflow: scroll;
+  border-radius: 5px;
+}
+
+.job-descriptions {
+  margin: 2rem;
 }
 
 /* job titles */
@@ -215,4 +255,25 @@ li [class^="job-"] {
 
 #app-info {
   height: 200px;
+}
+
+#sbt-btn {
+  width: 100px;
+  height: 50px;
+  border: none;
+  border-radius: 5px;
+  color: #FFF;
+  font-family: 'OstrichSansReg', sans-serif;
+  font-weight: normal;
+  font-style: normal;  font-size: 3em;
+  background-color: #024059;
+  box-shadow: inset black -1px -1px 2px;
+}
+
+#sbt-btn:hover {
+  background-color: #035475;
+}
+
+#sbt-mssg {
+  font-size: 2em;
 }

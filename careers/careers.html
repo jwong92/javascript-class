@@ -19,39 +19,46 @@
     <h2>Welcome to our careers page. That 70's Diner is an ever growing and expanding family, and we are always looking for people to become a part of it. Take a look at some of our postings below. If you don't see something you like, but feel you'd be a great fit, feel free to send us your resume anyways at: that70diner@gmail.com, with the subject line: Job Inquiry. We look forward to hearing from you!</h2>
     <h3>Job Categories</h3>
     <div class="job-types-container">
-      <div class="job-type"><p>Dining Room<p></div>
-      <div class="job-type"><p>Kitchen</p></div>
-      <div class="job-type"><p>Business</p></div>
-      <div class="job-type"><p>Bar</p></div>
-    <div>
+      <a href="#droom"><div class="job-type">Dining Room</div></a>
+      <a href="#kitchen"><div class="job-type">Kitchen</div></a>
+      <a href="#business"><div class="job-type">Business</div></a>
+      <a href="#bar"><div class="job-type">Bar</div></a>
+    </div>
   </header>
 
   <main id="main">
-    <div class="job-postings-descriptons-container">
+    <div class="job-postings-image-container">
       <aside class="job-positings">
-        <h2 class="category-title">Dining Room</h2>
+        <h2 class="category-title" id="droom">Dining Room</h2>
           <ul>
             <li><a href="#" class="job-1">Server - Mornings</a></li>
             <li><a href="#" class="job-2">Server - Closing</a></li>
             <li><a href="#" class="job-3">Host/Hostess</a></li>
           </ul>
-        <h2 class="category-title">Kitchen</h2>
+        <h2 class="category-title" id="kitchen">Kitchen</h2>
           <ul>
             <li><a href="#" class="job-4">Head Griller - Weekends</a></li>
             <li><a href="#" class="job-5">Prepper</a></li>
             <li><a href="#" class="job-6">Bus Boy/Girl</a></li>
             <li><a href="#" class="job-7">Griller</a></li>
           </ul>
-        <h2 class="category-title">Business</h2>
+        <h2 class="category-title" id="business">Business</h2>
           <ul>
             <li><a href="#" class="job-8">Payroll Accountant</a></li>
             <li><a href="#" class="job-9">Marketing Associate</a></li>
           </ul>
-        <h2 class="category-title">Bar</h2>
+        <h2 class="category-title" id="bar">Bar</h2>
           <ul>
             <li><a href="#" class="job-10">Bartender - Evenings</a></li>
           </ul>
       </aside>
+
+      <aside class="photos">
+        <div class="img-container">
+          <img src="../photos/career-img.png" alt="girl in front of a diner in retro clothing" />
+        </div>
+      </aside>
+    </div>
 
       <div class="pop-up hidden">
         <span id="close">X</span>
@@ -90,11 +97,12 @@
                   <textarea type="text" id="app-info" name="info"></textarea>
                 </li>
               </ul>
+              <button type="button" name="sbt-btn" id="sbt-btn">apply</button>
+              <p id="sbt-mssg" class="hidden">Thank you for applying.</p>
             </form>
           </div>
         </aside>
       </div>
-    </div>
 
     <aside class="hidden">
       <section id="server-morn" class="job-description-details hidden">
@@ -163,6 +171,7 @@
 
   <footer id="footer">
   </footer>
+
 </body>
 
 

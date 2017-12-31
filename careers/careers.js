@@ -1,14 +1,12 @@
 $(document).ready(function(){
 
-
-
 //POP UP BOX
 // number of jobs
 var jobs = 10;
 var jobClass = ".";
 
 //Determine the class that was clicked
-$("a").on("click", function(){
+$("li a").on("click", function(){
   jobClass += $(this).attr("class");
   $(".pop-up").removeClass("hidden");
   fillJobDescr(jobClass);
@@ -34,5 +32,14 @@ $("#close").on("mouseover", function(){
 $("#close").on("click", function(){
   $(".pop-up").addClass("hidden");
 });
+
+// SUBMIT BUTTON
+$("#sbt-btn").on("click", function(){
+  $("#sbt-mssg").removeClass("hidden");
+})
+
+$("#sbt-btn").on("mouseover",function(){
+  $(this).css("cursor", "pointer");
+})
 
 }); //END PAGE LOAD
