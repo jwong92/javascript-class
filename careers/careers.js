@@ -1,4 +1,6 @@
 $(document).ready(function(){
+// Clear the form
+$(".input-row input, textarea").val("");
 
 //POP UP BOX
 // number of jobs
@@ -32,11 +34,13 @@ $("#close").on("mouseover", function(){
 });
 $("#close").on("click", function(){
   $(".pop-up").addClass("hidden");
+  $(".input-row input, textarea").val("");
 });
 
 // SUBMIT BUTTON
 $("#sbt-btn").on("click", function(){
   $("#sbt-mssg").removeClass("hidden");
+  $(".input-row input, textarea").val("");
 })
 
 $("#sbt-btn").on("mouseover",function(){

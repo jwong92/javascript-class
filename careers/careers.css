@@ -251,6 +251,8 @@ li [class^="job-"] {
   margin: 1rem;
   border: none;
   box-shadow: -1px -1px 2px #AAAFB2;
+  font-size: 3em;
+  font-family: 'futura_mdcn_btmedium', sans-serif;
 }
 
 #app-info {
@@ -277,7 +279,6 @@ li [class^="job-"] {
 #sbt-mssg {
   font-size: 2em;
 }
-
 
 /* MEDIA QUERIES */
 
@@ -319,6 +320,9 @@ li [class^="job-"] {
   .category-title {
     font-size: 4em;
   }
+  .job-title-container h3, .job-description-container h3 {
+    font-size: 2em;
+  }
 }
 
 /* MAIN */
@@ -349,8 +353,61 @@ li [class^="job-"] {
   }
 }
 
+@media all and (max-width: 390px) {
+  .img-container {
+    width: 100%;
+  }
+}
+
 /* FORM */
 
 @media all and (max-width: 1410px) {
+  .form-wrapper {
+    max-width: 70%;
+  }
+}
 
+@media all and (max-width: 1225px) {
+  .form-wrapper {
+    max-width: 80%;
+  }
+}
+
+@media all and (max-width: 1085px) {
+  .form-wrapper {
+    max-width: 90%;
+  }
+}
+
+@media all and (max-width: 975px) {
+  .form-wrapper {
+    max-width: 100%;
+  }
+}
+
+@media all and (max-width: 905px) {
+  .input-row input, textarea {
+    width: 300px;
+  }
+}
+
+@media all and (max-width: 685px) {
+  .input-row input, textarea {
+    font-size: 2em;
+  }
+  .input-row label {
+    font-size: 2em;
+  }
+  .input-row {
+    flex-flow: column nowrap;
+  }
+  .btn-mssg-container {
+    text-align: center;
+  }
+}
+
+@media all and (max-width: 400px) {
+  .input-row label, input, textarea{
+    max-width: 100%;
+  }
 }
