@@ -74,22 +74,22 @@
             <p id="job-description">Where the entire job description goes</p>
           </div>
           <div class="form-wrapper">
-            <form name="application-form" method="post">
+            <form action="#" name="application-form" method="post" enctype="multipart/form-data">
               <ul>
                 <li class="input-row">
                   <label for="app-resume">Resume</label>
                   <input type="file" id="app-resume" name="resume" />
                 </li>
                 <li class="input-row">
-                  <label for="app-name">Full Name</label>
-                  <input type="text" id="app-name" name="name" />
+                  <label for="app-name">*Full Name</label>
+                  <input type="text" id="app-name" name="fname" />
                 </li>
                 <li class="input-row">
-                  <label for="app-pnum">Phone Number</label>
+                  <label for="app-pnum">*Phone Number</label>
                   <input type="number" id="app-pnum" name="pnum" />
                 </li>
                 <li class="input-row">
-                  <label for="app-email">Email</label>
+                  <label for="app-email">*Email</label>
                   <input type="email" id="app-email" name="email" />
                 </li>
                 <li class="input-row">
@@ -98,8 +98,8 @@
                 </li>
               </ul>
               <div class="btn-mssg-container">
-                <button type="button" name="sbt-btn" id="sbt-btn">apply</button>
-                <p id="sbt-mssg" class="hidden">Thank you for applying.</p>
+                <button type="submit" name="sbt-btn" id="sbt-btn">apply</button>
+                <p id="sbt-mssg"></p>
               </div>
             </form>
           </div>
