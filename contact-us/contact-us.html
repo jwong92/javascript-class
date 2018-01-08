@@ -13,6 +13,7 @@
     <script type="text/javascript" src="contact-us.js"></script>
   </head>
   <body>
+    <div class="bg"></div>
     <header id="header">
       <section class="header-wrapper">
         <img src="#" alt="restaurant logo" />
@@ -35,7 +36,7 @@
       </section>
       <div class="contact-container">
         <section class="main-form-wrapper">
-          <form name="contact-us-form" method="post">
+          <form id="myForm" name="contact-us-form" method="post">
             <ul>
               <li class="form-row">
                 <label for="fname">Name</label>
@@ -61,16 +62,10 @@
                 <textarea type="text" name="comment" id="comment"></textarea>
               </li>
             </ul>
-            <div class="icon-button-container">
-              <button id="sbt-btn" type="submit" name="btn-submit">Holla!</button>
-              <button id="clear-btn" type="submit" name="btn-clear">retart</button>
-              <i class="fa fa-motorcycle hidden" aria-hidden="true"></i>
-              <p class="hidden sent-mssg">Got it! We'll get back to you asap</p>
-            </div>
           </form>
         </section>
 
-        <section class="main-map-wrapper">
+        <!-- <section class="main-map-wrapper">
           <h2 id="contact-us" class="sub-heading">Contact Us</h2>
           <aside id="contact-information" class="map-contact-container">
             <div class="contact-us-address-container">
@@ -81,33 +76,33 @@
               <div class="address-container">
               <h3>Address</h3>
               <ul>
-                <li><p>That 70's Diner</p></li>
+                <li><p>The 70's Diner</p></li>
                 <li><p>1234 RocknRoll Road</p></li>
                 <li><p>Riverside, Ontario</p></li>
                 <li><p>D1N 3R5</p></li>
               </ul>
               <div class="email-container">
                 <h3>Email</h3>
-                <p>that70diner@gmail.com</p>
+                <p>the70diner@gmail.com</p>
               </div>
               </div>
             </div>
             <div class="contact-us-hours-container">
               <div class="hours-container">
                 <h3>Hours</h3>
-                <ul>
-                  <li><p>Monday: 12:00PM - 1:00AM</p></li>
-                  <li><p>Tuesday: 12:00PM - 1:00AM</p></li>
-                  <li><p>Wednesday: 12:00PM - 1:00AM</p></li>
-                  <li><p>Thursday: 12:00PM - 1:00AM</p></li>
-                  <li><p>Friday: 12:00PM - 4:00AM</p></li>
-                  <li><p>Saturday: 12:00PM - 4:00AM</p></li>
-                  <li><p>Sunday: 12:00PM - 4:00AM</p></li>
-                </ul>
+                <p> 24/7. All day everyday.</p>
               </div>
             </div>
           </aside>
-        </section>
+        </section> -->
+        <div class="icon-button-container">
+          <div class="button-container">
+          <button id="sbt-btn" type="submit" name="btn-submit">Holla!</button>
+          <button id="clear-btn" type="submit" name="btn-clear">Restart</button>
+          </div>
+          <p class="hidden sent-mssg">Got it! We'll get back to you asap</p>
+          <i class="fa fa-motorcycle hidden" aria-hidden="true"></i>
+      </div>
       </div>
     </main>
 
@@ -124,5 +119,6 @@
         </nav>
       </section>
     </footer>
+
   </body>
 </html>

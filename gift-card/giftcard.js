@@ -1,10 +1,13 @@
 // https://stackoverflow.com/questions/12470879/a-function-inside-a-for-loop-with-jquery-and-javascript -- for click handling
 $(document).ready(function(){
 
+//CLEAR FORM
+$("#myForm")[0].reset();
+
 
 //BACKGROUND COLOR
 $("#darkblue").on("click", function(){
-  backgroundColor("#0475A3");
+  backgroundColor("#50BFBF");
 });
 
 $("#teal").on("click", function() {
@@ -118,33 +121,70 @@ function addPrice(amount) {
 // Expiry Date
 var todaysDate = new Date();
 var dayOfYear = (todaysDate.getFullYear()) + 1;
-var dayOfMonth = todaysDate.getMonth();
-var dayOfDate = todaysDate.getDate();
+var dayOfMonth = "0" + (todaysDate.getMonth() + 1);
+var dayOfDate = "0" + todaysDate.getDate();
 
 var expiryDate = (dayOfYear + "/" + dayOfMonth + "/" + dayOfDate);
 
 $("#date").html(expiryDate);
 
-// $("#date").html()
-
-// SUBMIT BUTTON MSSG
-$("#sbt-btn").on("click", function(){
-  $("#main-design > p:last-of-type").html("Far out! Your gift card is being made. We'll call you when it's ready.");
-})
-
 // CLEAR BUTTON
 $("#clear-btn").on("click", function(){
-  backgroundColor("#0475A3");
+  backgroundColor("#50BFBF");
   changeFont("impact");
   removeIcon();
   addName("");
   fromName("");
   addPrice(-1);
-  $("#message").val("");
-  $("#in-from").val("");
-  $("#dollar").val("");
-  $("#telephone").val("");
+  $("#myForm")[0].reset();
+  $("#main-design > p:last-of-type").html("");
+
 })
+
+// FORM VALIDATION
+var form = document.forms["gc-form"];
+form.onsubmit = processForm;
+
+function processForm(e) {
+  $("#main-design > p:last-of-type").html("");
+
+  //Capture form values
+  var formControls = myForm.elements;
+  var forName = formControls[0].value;
+  var fromName = formControls[1].value;
+  var amt = formControls[2].value;
+  var phone = formControls[3].value;
+
+  // Validate Names
+  if ((forName === "" || forName === null) || (fromName === "" || fromName === null)){
+    $("#main-design > p:last-of-type").html("Please enter a To/From name.");
+    return false;
+  }
+
+  //Validate amount
+  if ((amt === "" || amt === null) || (amt <= 0 || amt > 5000)){
+    $("#main-design > p:last-of-type").html("Sorry, giftcards can only accept a maximum of $5000");
+    return false;
+  }
+
+
+  //Validate Phone Number
+  var phoneNum = /^\d{10}$/;
+  if (phone === "" || phone === null) {
+    $("#main-design > p:last-of-type").html("Please enter a phone number so we can reach ya cool cat!");
+    console.log("okay");
+    return false;
+  } else if (!phoneNum.test(phone)) {
+    console.log("works");
+    $("#main-design > p:last-of-type").html("Please make sure the phone number you entered is valid");
+    return false;
+  }
+
+  $("#main-design > p:last-of-type").html("Far out! Your gift card is being made. We'll call you when it's ready.");
+
+  e.preventDefault();
+}
+
 
 
 })//End Page Load

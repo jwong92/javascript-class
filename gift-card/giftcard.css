@@ -54,7 +54,7 @@ body {
   font-weight: normal;
   font-style: normal;
   color: black;
-  background-color: #50BFBF;
+  background-color: #EFEFEF;
 }
 
 ul {
@@ -69,6 +69,7 @@ ul {
 [class$="design-container"] {
   display: flex;
   flex-flow: row wrap;
+  justify-content: space-around;
 }
 
 #main-design h3 {
@@ -86,6 +87,14 @@ ul {
 
 [class$="num-container"], [class$="input-container"] {
   margin-top: 0.5rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.symbol-input {
+  display: flex;
+  flex-flow: row;
+  align-items: center;
 }
 
 [class$="num-container"] label {
@@ -95,24 +104,23 @@ ul {
 [class$="input-container"] input {
   height: 40px;
   width: 400px;
-  margin-left: 1rem;
+  /* margin-left: 1rem; */
   border: none;
   box-shadow: inset -1px -1px 2px;
-  font-size: 2em;
   padding: 0.5rem;
   border-radius: 5px;
-  font-family: 'Helvetica', sans-serif;
+  font-family: 'OstrichSans', sans-serif;
+  font-size: 2.5em;
 }
 
 [class$="num-container"] input {
   height: 40px;
   width: 150px;
-  font-size: 2em;
   border: none;
   box-shadow: inset -1px -1px 2px;
   border-radius: 5px;
-  font-family: 'Helvetica', sans-serif;
-}
+  font-family: 'OstrichSans', sans-serif;
+  font-size: 2.5em;}
 
 /*MAIN*/
 .main-design-and-result-container {
@@ -151,7 +159,7 @@ ul {
 }
 
 #darkblue {
-  background-color: rgb(4, 117, 163);
+  background-color: rgb(80, 191, 191);
 }
 
 #teal {
@@ -165,7 +173,6 @@ ul {
 #mauve {
   background-color: rgb(168, 195, 255);
 }
-
 
 .color-text {
   text-align: center;
@@ -252,6 +259,11 @@ ul {
   align-self: flex-end;
 }
 
+/* FORM */
+.form-wrapper {
+  max-width: 528px;
+}
+
 /*SUBMIT/CLEAR BTN*/
 [id$="btn"] {
   margin-top: 1rem;
@@ -263,11 +275,11 @@ ul {
   font-family: 'OstrichSans', sans-serif;
   font-weight: normal;
   font-style: normal;  font-size: 3em;
-  background-color: #024059;
+  background-color: #4AC0Bf;
 }
 
 [id$="btn"]:hover {
-  background-color: #035475;
+  background-color: #42ABAA;
 }
 
 /*SUBMIT MESSAGE*/
@@ -279,14 +291,16 @@ ul {
 /*GIFT CARD PREVIEW*/
 #main-result h2 {
   font-size: 3em;
+  text-align: center;
 }
 
 .preview {
   width: 50em;
   height: 30em;
-  background-color: #0475A3;
+  background-color: #50BFBF;
   border: 0.5px solid #000;
   padding: 1rem;
+  border-radius: 5%/9%;
 }
 
 .preview h3 {
@@ -332,6 +346,53 @@ ul {
   font-family: 'Impact', sans-serif;
 }
 
+/* MEDIA QUERIES */
+
+@media all and (max-width: 1159px) {
+  .main-design-and-result-container {
+    flex-direction: column-reverse;
+  }
+}
+
+@media all and (max-width: 730px) {
+  #giftcards {
+    font-size: 7em;
+  }
+  .main-title-wrapper h2 {
+    font-size: 2.5em;
+  }
+}
+
+@media all and (max-width: 570px) {
+  .background-color-design-container div, .image-design-container > li {
+    width: 5em;
+    height: 5em;
+  }
+  .font-design-container div {
+    width: 2.5em;
+    height: 2.5em;
+  }
+  .preview {
+    width: 100%;
+  }
+  .form-wrapper {
+    width: 450px;
+  }
+  form {
+    width: 100%;
+  }
+}
+
+@media all and (max-width: 480px) {
+  [class$="num-container"], [class$="input-container"] {
+    flex-flow: column nowrap;
+    align-items:flex-start;
+  }
+}
+
+@media all and (max-width: 470px) {
+
+}
 
 /*COLORS
 

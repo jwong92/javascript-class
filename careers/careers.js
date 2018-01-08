@@ -50,7 +50,7 @@ var myForm = document.forms["application-form"];
 myForm.onsubmit = processForm;
 
 function processForm(e){
-  $("sbt-mssg"). html("");
+  $("sbt-mssg").html("");
 
   //Capture form values
   var formControls = myForm.elements;

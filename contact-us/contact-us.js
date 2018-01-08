@@ -18,7 +18,7 @@ function sent() {
 }
 
 // on click of the clear button, clear the page
-  $("#btn-clear").on("click", function(){
+  $("#clear-btn").on("click", function(){
     clear();
   });
 
@@ -52,7 +52,7 @@ $(".fa-motorcycle").on(animationEvent, function() {
 
 // Function to clear the form
 function clear() {
-  $(".form-row label").html("");
+  $("#myForm")[0].reset();
 }
 
 });//END PAGE LOAD
