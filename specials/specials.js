@@ -3,41 +3,6 @@ $(document).ready(function(){
 //On page load, remove all the specials
 $("[id^='group']").css("display", "none");
 
-// Set two colors of sign
-
-//Timer for when to run the flicker
-//Timer for how long it stays black
-//Timer for how long it stays red
-//Timer for how long it stays black
-//Timer for how long it stays red
-var a;
-var b;
-var flick = setInterval(flicker, 2000);
-
-function flicker() {
-  a = setInterval(toBlack, 100);
-  console.log("A");
-  b = setInterval(toRed, 200);
-  console.log("B");
-  // clearFlicker();
-}
-
-function toBlack() {
-  $("#n").css("color","#FFF");
-  clearInterval(a);
-  console.log("white");
-}
-
-function toRed() {
-  $("#n").css("color", "#FF3B3F");
-  clearInterval(b);
-  console.log("red");
-}
-
-function clearFlicker() {
-  clearInterval(flick);
-  console.log("clear");
-}
 
 //Find the day of the week
 var today = new Date;
@@ -49,5 +14,24 @@ $("#date span").html(fullDate);
 
 //Display the special for today's date
 $("#group-" + day).css("display", "block");
+
+
+// NAV
+// https://api.jquery.com/event.data/
+var dropDowns = 2;
+
+for (var i=1; i<=dropDowns; i++) {
+  //on hover of the correct a, display the correct dropdown
+  var link = ".drop-"+[i];
+  $(link).mouseover({value: i}, function(e){
+    $(".drop-down-content-"+[e.data.value]).css("display", "block");
+    $(".drop-down-content-"+[e.data.value]).addClass("drop-down-style");
+  });
+  $(link).mouseleave({value: i}, function(e){
+    $(".drop-down-content-"+[e.data.value]).css("display", "none");
+  });
+}
+
+
 
 })//END OF PAGE LOAD
