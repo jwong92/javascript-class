@@ -1,5 +1,32 @@
 $(document).ready(function(){
-// Clear the form
+
+  // NAV
+  // https://api.jquery.com/event.data/
+  var dropDowns = 2;
+
+  for (var i=1; i<=dropDowns; i++) {
+    //on hover of the correct a, display the correct dropdown
+    var link = ".drop-"+[i];
+    $(link).mouseover({value: i}, function(e){
+      $(".drop-down-content-"+[e.data.value]).css("display", "block");
+      $(".drop-down-content-"+[e.data.value]).addClass("drop-down-style");
+    });
+    $(link).mouseleave({value: i}, function(e){
+      $(".drop-down-content-"+[e.data.value]).css("display", "none");
+    });
+  }//END NAV
+
+// JOB POSTINGS ON HOVER
+var numJobs = 10;
+for (var i=1; i<=numJobs; i++) {
+  var selector = ".job-"+[i];
+  $(selector).mouseover({value: i}, function(e){
+    $(this).css("color", "#D92818");
+  })
+  $(selector).mouseleave({value: i}, function(e){
+    $(this).css("color", "#000");
+  })
+}
 
 //POP UP BOX
 // number of jobs
@@ -24,6 +51,7 @@ function fillJobDescr(job) {
   $("#job-id").html(b);
   $("#job-manager").html(c);
   $("#job-description").load("job-desc.html" + " " + d);
+  // $("#job-description").html(d);
 }
 
 // Close pop up box
@@ -34,11 +62,6 @@ $("#close").on("click", function(){
   $(".pop-up").addClass("hidden");
   $(".input-row input, textarea").val("");
 });
-
-// SUBMIT BUTTON
-// $("#sbt-btn").on("click", function(){
-//   $("#sbt-mssg").html("Thank you for applying");
-// })
 
 $("#sbt-btn").on("mouseover",function(){
   $(this).css("cursor", "pointer");
@@ -78,7 +101,6 @@ function processForm(e){
   // EMAIL
   var emailFilter = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
 
-
   if (inEmail === "" || inEmail === null) {
     $("#sbt-mssg").html("* Please fill all required fields.");
     return false;
@@ -92,9 +114,6 @@ function processForm(e){
 
 
   e.preventDefault();
-
-
-
 
 }
 

@@ -1,6 +1,22 @@
 // https://stackoverflow.com/questions/12470879/a-function-inside-a-for-loop-with-jquery-and-javascript -- for click handling
 $(document).ready(function(){
 
+  // NAV
+  // https://api.jquery.com/event.data/
+  var dropDowns = 2;
+
+  for (var i=1; i<=dropDowns; i++) {
+    //on hover of the correct a, display the correct dropdown
+    var link = ".drop-"+[i];
+    $(link).mouseover({value: i}, function(e){
+      $(".drop-down-content-"+[e.data.value]).css("display", "block");
+      $(".drop-down-content-"+[e.data.value]).addClass("drop-down-style");
+    });
+    $(link).mouseleave({value: i}, function(e){
+      $(".drop-down-content-"+[e.data.value]).css("display", "none");
+    });
+  }//END NAV
+
 //CLEAR FORM
 $("#myForm")[0].reset();
 
@@ -49,6 +65,7 @@ for (var i=0; i<iconArr.length; i++) {
   var selector = "."+iconArr[i];
   $(selector).on("click", {id:i}, function(e) {
     removeIcon();
+    $(".price-icon-preview-container").css("justify-content", "space-around");
     addIcon(iconArr[e.data.id]);
   })
 }
@@ -138,7 +155,7 @@ $("#clear-btn").on("click", function(){
   addPrice(-1);
   $("#myForm")[0].reset();
   $("#main-design > p:last-of-type").html("");
-
+  $(".price-icon-preview-container").css("justify-content", "center");
 })
 
 // FORM VALIDATION

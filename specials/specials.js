@@ -30,7 +30,7 @@ for (var i=1; i<=dropDowns; i++) {
   $(link).mouseleave({value: i}, function(e){
     $(".drop-down-content-"+[e.data.value]).css("display", "none");
   });
-}
+}//END NAV
 
 
 

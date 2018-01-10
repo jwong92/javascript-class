@@ -60,7 +60,6 @@ body {
   font-style: normal;
   color: black;
   background-color: #EFEFEF;
-  padding: 2rem;
 }
 
 ul {
@@ -69,12 +68,10 @@ ul {
 
 a {
   text-decoration: none;
-  color: #000;
+  color: #FFF;
 }
 
 a:hover {
-  text-decoration: underline;
-  /* color: #024059; */
   color: #D92A1A;
 }
 
@@ -83,10 +80,94 @@ a:hover {
 }
 
 /* HEADER */
-#header {
+/* LOGO */
+
+.title_box {
+  position: relative;
+  height: 95px;
+  width: 225px;
+  margin: 20px auto;
+  font-family: "Milkshake", sans-serif;
+  text-shadow: 0 0 7px #FFF, 0 0 25px #D92818;
+}
+
+ .title_box span{
+  color: #FF3B3F;
+}
+
+.The70 {
+  position: absolute;
+  font-size: 35px;
+  transform: rotate(-20deg);
+}
+
+.Diner {
+  position: absolute;
+  top: 10px;
+  left: 25px;
+  font-size: 80px;
+}
+
+.base_bg {
+  position: absolute;
+  top: 32px;
+  left: 7px;
+  width: 230px;
+  height:70px;
+  border-radius: 20px;
+  background-color: #4AC0BF;
+}
+
+.base_tp {
+  position: absolute;
+  width: 70px;
+  height:70px;
+  top: 5px;
+  left: 85px;
+  border-radius: 40px;
+  background-color: #4AC0BF;
+}
+
+/* NAVIGATION */
+#navbar {
+  background-color: #4AC0BF;
+  height: 2.2rem;
+  padding-top: 0.1rem;
+  position: absolute;
+  width: 100%;
+  top: calc(105px - 1.8rem);
+}
+
+.drop-down {
+  display: flex;
+  justify-content: space-around;
+}
+
+[class^="drop-down-content"] {
+  display: none;
+  padding-bottom: 0.5rem;
+}
+
+.drop-down li a {
+  font-size: 2.5em;
+  padding-left: 0.5rem;
+}
+
+.drop-down li:nth-child(1), .drop-down li:nth-child(2) {
+  width: 15em;
+}
+
+.drop-down-style {
+  background-color:#4AC0BF;
+  border-radius: 0 0 15px 15px;
+}
+
+/* TITLE */
+#title-blurb-container {
   max-width: 1280px;
   margin: 0 auto;
-  text-align: center
+  text-align: center;
+  padding: 2rem;
 }
 
 h1 {
@@ -96,11 +177,11 @@ h1 {
   font-weight: normal;
   font-style: normal;
 }
-#header h2 {
+#title-blurb-container h2 {
   font-size: 3em;
 }
 
-#header h3 {
+#title-blurb-container h3 {
   font-family: 'OstrichSansReg', sans-serif;
   font-style: normal;
   font-weight: normal;
@@ -140,7 +221,8 @@ h1 {
 
 .job-type:hover {
   cursor: pointer;
-  color: #FFF;
+  color: #D92A1A;
+  background-color: #4DB8B8;
 }
 
 /* MAIN */
@@ -150,6 +232,12 @@ h1 {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+a[class^="job"] {
+  color: #000;
 }
 
 /* category-titles */
@@ -280,6 +368,21 @@ li [class^="job-"] {
   font-size: 2em;
 }
 
+/* FOOTER */
+#footer {
+  background-color: #50BFBF;
+  color: #FFF;
+  font-size: 2em;
+}
+
+.bg-bar-container {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content:center;
+  padding: 1rem;
+  width: 100%;
+}
+
 /* MEDIA QUERIES */
 
 /* header */
@@ -297,7 +400,7 @@ li [class^="job-"] {
     width: 100px;
   }
 
-  #header h2 {
+  #title-blurb-container h2 {
     font-size: 2.5em;
   }
 }
@@ -309,10 +412,10 @@ li [class^="job-"] {
   h1 {
     font-size: 7em;
   }
-  #header h2 {
+  #title-blurb-container h2 {
     font-size: 2em;
   }
-  #header h3 {
+  #title-blurb-container h3 {
     font-size: 4em;
     margin-top: 1rem;
     margin-bottom: 1rem;
